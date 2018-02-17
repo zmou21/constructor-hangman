@@ -9,6 +9,8 @@
 	// A function that takes a character as an argument and checks it against the underlying character, 
 	// 		updating the stored boolean value to true if it was guessed correctly
 
+	// letter has a guess function flip it over 
+
 var inquirer = require("inquirer");
 
 
@@ -42,3 +44,6 @@ console.log(letter.display());
 console.log(letter.character());
 
 module.exports = Letter;
+
+// split the word 
+// look into a .map for word.js
