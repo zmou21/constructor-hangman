@@ -38,10 +38,10 @@ var Letter = function(letter) {
 };
 
 var letter = new Letter("B");
-console.log(letter.letter);
+//console.log(letter.letter);
 //console.log(letter.value);
-console.log(letter.display());
-console.log(letter.character());
+// console.log(letter.display());
+// console.log(letter.character());
 
 module.exports = Letter;
 
