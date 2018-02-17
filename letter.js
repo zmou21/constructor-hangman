@@ -27,7 +27,7 @@ var Letter = function(letter) {
 			return placeholder;
 		}
 	};
-	this.character = function() {
+	this.guess = function() {
 		if (this.letter === letter) {
 			value = true;
 		}
