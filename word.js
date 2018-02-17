@@ -13,20 +13,21 @@
 var Letter = require("./letter.js");
 
 var Word = function(word) {
-	this.wordSplit = [];
+	this.wordSplit = [];	
 	this.word = function() {
 		wordSplit = word.split("");
-		// for (var i = 0; i < wordSplit.length; i++) {
-		// 	var word = new Letter(letter);
-		// };
+		console.log(wordSplit);
+		for (var i = 0; i < wordSplit.length; i++) {
+			//var word = new Letter(letter);
+			
+		};
 	};
 	this.guess = function() {
-
-	};	
-
+		//console.log(wordSplit);
+	};
 }
 
 var h = new Word("hello");
 
-console.log(h.word());
-//console.log(h.wordSplit);
+h.word();
+h.guess();
