@@ -16,11 +16,18 @@ var Word = function(word) {
 	this.wordSplit = [];	
 	this.word = function() {
 		wordSplit = word.split("");
+
+		//var letterSplit = new Letter(letterConcat);
+
 		console.log(wordSplit);
+		//console.log(letterConcat);
+		//console.log(letterSplit.display());
+		
 		for (var i = 0; i < wordSplit.length; i++) {
-			var letterSplit = new Letter(wordSplit[i]);
-			var letterConcat = letterSplit.join();
-			console.log(letterSplit.display());
+			
+			var letterConcat = wordSplit[i].join();
+			//var letterSplit = new Letter(wordSplit[i]);
+			//console.log(letterSplit.letter.concat());
 		};
 	};
 	this.guess = function() {
@@ -28,7 +35,7 @@ var Word = function(word) {
 	};
 }
 
-var h = new Word("Hello");
+var h = new Word("hello");
 
 h.word();
 // h.guess();
