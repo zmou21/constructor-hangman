@@ -18,8 +18,9 @@ var Word = function(word) {
 		wordSplit = word.split("");
 		console.log(wordSplit);
 		for (var i = 0; i < wordSplit.length; i++) {
-			//var word = new Letter(letter);
-			
+			var letterSplit = new Letter(wordSplit[i]);
+			var letterConcat = letterSplit.join();
+			console.log(letterSplit.display());
 		};
 	};
 	this.guess = function() {
@@ -27,7 +28,9 @@ var Word = function(word) {
 	};
 }
 
-var h = new Word("hello");
+var h = new Word("Hello");
 
 h.word();
-h.guess();
+// h.guess();
+
+module.exports = Word;
