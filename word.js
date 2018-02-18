@@ -13,7 +13,7 @@ var Letter = require("./letter.js");
 
 var Word = function(word) {
 	this.wordSplit = [];	
-	this.word = function() {
+	this.wordSplit = function() {
 
 // Split each incoming letter into the array wordSplit
 

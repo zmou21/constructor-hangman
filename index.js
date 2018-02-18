@@ -6,23 +6,31 @@
 
 var inquirer = require("inquirer");
 
-// function guess() {
-// 	inquirer.prompt([
-// 	{
-// 	type: "input",
-// 	name: "letter",
-// 	message: "Guess a letter:"	
-// 	}	
-// 	]).then(function(result) {
-// 		if(result.letter){
-// 			var letter = new Letter(result.letter.toLowerCase());
-// 			console.log(result.letter);
-// 		}
-// 		else{
-// 			console.log("guess again");
-// 		}
-// 	});
-// };
+var craftBeers = ["avery", "breckenridge", "oskar", "reverend", "banananut"];
 
+var chosenWord = craftBeers[Math.floor(Math.random() * wordsList.length)];
+
+//Takes in user input using inquirer and compare 
+
+var Random = function() {
+	this.select = Word.wordSplit(chosenWord);
+	this.guess = function() {
+		inquirer.prompt([
+		{
+		type: "input",
+		name: "letter",
+		message: "Guess a letter:"	
+		}	
+		]).then(function(result) {
+			if(result.letter){
+				var letter = new Word(result.letter);
+				console.log(result.letter);
+			}
+			else{
+				console.log("guess again");
+			}
+		});
+	};
+}
 
 var Word = require("./word.js");
