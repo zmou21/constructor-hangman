@@ -19,6 +19,7 @@ var Letter = function(letter) {
 	this.value = false;
 	this.display = function() {
 		var placeholder = "_";
+
 		if(this.letter === letter) {
 			//console.log("continue");
 			return letter;

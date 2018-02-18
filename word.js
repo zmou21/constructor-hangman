@@ -16,8 +16,8 @@ var Word = function(word) {
 	this.wordSplit = [];	
 	this.word = function() {
 		wordSplit = word.split("");
-
-		//var letterSplit = new Letter(letterConcat);
+		var blank = 0;
+		blank = wordSplit.length;
 
 		console.log(wordSplit);
 		//console.log(letterConcat);
