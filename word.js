@@ -8,36 +8,43 @@
 	// takes word and splits it and use a map to create instance for letter constructor for each letter 
 // A function that takes a character as an argument and calls the guess function on each letter object 
 	// (the second function defined in Letter.js)
-	// guess a letter method and takes in character that sets a bool
 
 var Letter = require("./letter.js");
 
 var Word = function(word) {
 	this.wordSplit = [];	
 	this.word = function() {
+
+// Split each incoming letter into the array wordSplit
+
 		wordSplit = word.split("");
-		var blank = 0;
-		blank = wordSplit.length;
 
 		console.log(wordSplit);
 		//console.log(letterConcat);
 		//console.log(letterSplit.display());
-		
+
+// loop through the split word array and use the Letter.js function .display() to replace the word with 
+// the character or an underscore and concatenate	
+
 		for (var i = 0; i < wordSplit.length; i++) {
 			
-			var letterConcat = wordSplit[i].join();
+			//var letterConcat = wordSplit[i].join();
 			//var letterSplit = new Letter(wordSplit[i]);
-			//console.log(letterSplit.letter.concat());
+			//letterSplit.join(" ");
+			console.log(letterSplit);
 		};
 	};
+// checks each word and with the Letter.js function .guess() takes in character that sets a bool and compares it to true or false
 	this.guess = function() {
-		//console.log(wordSplit);
+		var wordGuess = Letter.guess();
+
 	};
 }
 
-var h = new Word("hello");
+// Test files
+	//var h = new Word("hello");
 
-h.word();
-// h.guess();
+	//h.word();
+	// h.guess();
 
 module.exports = Word;
